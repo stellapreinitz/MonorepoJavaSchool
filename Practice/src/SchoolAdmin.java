@@ -1,4 +1,10 @@
+//LEGACY CODE, ENTIRELY REPLACED BY SCHOOLADMIN2
+//LEGACY CODE, ENTIRELY REPLACED BY SCHOOLADMIN2
+//LEGACY CODE, ENTIRELY REPLACED BY SCHOOLADMIN2
+//LEGACY CODE, ENTIRELY REPLACED BY SCHOOLADMIN2
+
 //Import Scanner for use of input, InputMismatchException for input handling
+
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
@@ -121,3 +127,8 @@ public class SchoolAdmin
 //    - Alla studenters namn och medelbetyg
 //    - Antal godkända studenter
 //    - Klassens medelbetyg
+
+//LEGACY CODE, ENTIRELY REPLACED BY SCHOOLADMIN2
+//LEGACY CODE, ENTIRELY REPLACED BY SCHOOLADMIN2
+//LEGACY CODE, ENTIRELY REPLACED BY SCHOOLADMIN2
+//LEGACY CODE, ENTIRELY REPLACED BY SCHOOLADMIN2
