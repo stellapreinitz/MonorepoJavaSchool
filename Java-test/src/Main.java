@@ -1,26 +1,25 @@
+import java.util.Scanner;
+
 public class Main
 {
-    static void main()
+    static void main(String[] args)
     {
-        printCourseInfo();
-        greetStudent("Stella");
-        int summa = calculateTotal(4, 9);
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println(summa);
-    }
+        System.out.println("Enter how many days you want to register temperature for: ");
+        int numberOfDays = scanner.nextInt();
+        int[] temperature = new int[numberOfDays];
 
-    public static void printCourseInfo()
-    {
-        System.out.println("Welcome to the course, today we are in classroom 5.");
-    }
+        System.out.println("The array has " + temperature.length + " indexes.");
 
-    public static void greetStudent(String name)
-    {
-        System.out.println("Hello " + name + ".");
-    }
-
-    public static int calculateTotal(int firstNumber, int secondNumber)
-    {
-        return firstNumber + secondNumber;
+        for (int index = 0; index < temperature.length; index++)
+        {
+            System.out.println("Enter temperature for day " + (index + 1) + ":");
+            temperature[index] = scanner.nextInt();
+        }
+        for (int index = 0; index < temperature.length; index++)
+        {
+            System.out.println("Temperature for day " + (index + 1) + " is " + temperature[index] + ".");
+        }
     }
 }
