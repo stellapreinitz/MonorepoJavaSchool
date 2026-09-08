@@ -4,32 +4,6 @@ public class Main
 {
     static void main(String[] args)
     {
-        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("How many temperatures do you want to register?");
-        int numberOfDays = scanner.nextInt();
-
-        while (numberOfDays <= 0)
-        {
-            System.out.println("Enter at lest 1 day to register.");
-            System.out.println("How many temperatures do you want to register?");
-            numberOfDays = scanner.nextInt();
-        }
-        int[] temperatures = new int[numberOfDays];
-
-        for (int index = 0; index < temperatures.length; index++)
-        {
-            System.out.println("Enter temperature for day " + (index + 1 ) + ":");
-            temperatures[index] = scanner.nextInt();
-        }
-        int sum = 0;
-        System.out.println("\n---Registered temperatures---");
-        for (int index = 0; index < temperatures.length; index++)
-        {
-            System.out.println("Day " + (index + 1) + ": " + temperatures[index] + " degrees.");
-            sum += temperatures[index];
-        }
-        double temperatureAverage = (double) sum / temperatures.length;
-        System.out.println("The average temperature for the period is: " + temperatureAverage + " degrees.");
     }
 }

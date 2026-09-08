@@ -9,10 +9,14 @@ public class SchoolAdmin2
         System.out.println("Number of students: " + numberOfStudents);
         String[] arrayStudents = new String[numberOfStudents];
 
-        for (int index = 0; index < arrayStudents.length; index++)
+        for (int indexStudents = 0; indexStudents < arrayStudents.length; indexStudents++)
         {
-            System.out.println("Enter name of student " + (index + 1 ) + ":");
-            arrayStudents[index] = scanner.nextLine();
+            System.out.println("Enter name of student " + (indexStudents + 1 ) + ":");
+            arrayStudents[indexStudents] = scanner.nextLine();
+            for (int indexTestScore = 0; indexTestScore < arrayStudents.length; indexTestScore++)
+            {
+                System.out.println("Enter score on test " + (indexTestScore + 1) + ":");
+            }
         }
         for (int index = 0; index < arrayStudents.length; index++)
         {
