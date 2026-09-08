@@ -14,7 +14,7 @@ public class DynamicArrays
 
         for (int index = 0; index < numbers.length; index++)
         {
-            System.out.println("Enter value of number " + (index + 1));
+            System.out.println("Enter value of number " + (index + 1) );
             numbers[index] = scanner.nextInt();
             sum += numbers[index];
         }
