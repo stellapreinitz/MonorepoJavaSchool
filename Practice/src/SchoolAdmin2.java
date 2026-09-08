@@ -8,8 +8,9 @@ public class SchoolAdmin2
         Scanner scanner = new Scanner(System.in);
         int numberOfStudents = validateInput(scanner, "Enter number of students: ");
         System.out.println("Number of students: " + numberOfStudents);
-    }
 
+    }
+    //Metod validerar om input är ett positivt heltal. Kan återanvändas vid alla tillfällen där input förväntas vara int>0.
     public static int validateInput(Scanner scanner, String prompt)
     {
         while (true)
@@ -36,7 +37,7 @@ public class SchoolAdmin2
     }
 }
 // Skapa ett program som:
-// 1. Frågar efter antal studenter
+// 1. Frågar efter antal studenter X
 // 2. För varje student:
 //    - Frågar efter namn
 //    - Frågar efter 3 betyg
