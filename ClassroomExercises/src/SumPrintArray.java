@@ -1,9 +1,13 @@
+import java.util.Scanner;
+
 public class SumPrintArray
 {
     static void main(String[] args)
     {
-        int[] numbersArray = {4, 7, 8, 9, 10, 13, 15};
-
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter size of array: ");
+        int[] numbersArray = new int[setArraySize(scanner)];
+        populateArray(numbersArray);
         printNumbers(numbersArray);
         int numbersSum = calculateSum(numbersArray);
         double numbersAverage = calculateAverage(numbersSum, numbersArray);
@@ -30,5 +34,18 @@ public class SumPrintArray
     public static double calculateAverage(int sum, int[] values)
     {
         return (double)sum/values.length;
+    }
+    public static int setArraySize(Scanner scanner)
+    {
+        return scanner.nextInt();
+    }
+    public static void populateArray(int[] array)
+    {
+        Scanner scanner = new Scanner(System.in);
+        for (int index = 0; index < array.length; index++)
+        {
+            System.out.println("Enter number " + (index+1));
+            array[index] = scanner.nextInt();
+        }
     }
 }
