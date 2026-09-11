@@ -7,7 +7,7 @@ public class SumPrintArray
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter size of array: ");
         int[] numbersArray = new int[setArraySize(scanner)];
-        populateArray(numbersArray);
+        populateArray(numbersArray, scanner);
         printNumbers(numbersArray);
         int numbersSum = calculateSum(numbersArray);
         double numbersAverage = calculateAverage(numbersSum, numbersArray);
@@ -39,9 +39,8 @@ public class SumPrintArray
     {
         return scanner.nextInt();
     }
-    public static void populateArray(int[] array)
+    public static void populateArray(int[] array, Scanner scanner)
     {
-        Scanner scanner = new Scanner(System.in);
         for (int index = 0; index < array.length; index++)
         {
             System.out.println("Enter number " + (index+1));
