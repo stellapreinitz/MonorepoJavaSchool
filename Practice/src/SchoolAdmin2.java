@@ -60,12 +60,12 @@ public class SchoolAdmin2
                 }
                 else
                 {
-                    System.out.println("Invalid input, use positive intger.");
+                    System.out.println("Invalid input, use positive integer.");
                 }
             }
             catch (NumberFormatException error)
             {
-                System.out.println("Invalid input, use positive intger.");
+                System.out.println("Invalid input, use positive integer.");
             }
         }
     }
