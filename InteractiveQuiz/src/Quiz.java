@@ -32,11 +32,14 @@ public class Quiz
     }
     public static int quiz()
     {
+        String[] question = {"q1", "q2", "q3", "q4", "q5"};
+        String[][] answerOptions = {{"o1","o2","o3","o4"},{"o1","o2","o3","o4"},{"o1","o2","o3","o4"},{"o1","o2","o3","o4"},{"o1","o2","o3","o4"}};
+        int[] correctOptions = {3,4,1,3,4};
         int score = 0;
-        for (int index = 0; index < 5; index++)
+        for (int index = 0; index < question.length; index++)
         {
             System.out.println("Question number " + (index+1) + ":");
-            score += askQuestion("q", new String[4],3 );
+            score += askQuestion(question[index], answerOptions[index],3 );
         }
         return score;
     }
@@ -91,9 +94,3 @@ public class Quiz
         }
     }
 }
-// Bygg ett quiz-program som:
-// 1. Har 5 frågor med 4 svarsalternativ vardera
-// 2. Låter användaren välja svar för varje fråga
-// 3. Håller koll på antal rätta svar
-// 4. Ger feedback efter varje fråga
-// 5. Visar slutresultat och betyg baserat på prestanda
