@@ -1,5 +1,6 @@
 out/
 production/
+artifacts/
 .idea/
 *.iml
 .DS_Store
