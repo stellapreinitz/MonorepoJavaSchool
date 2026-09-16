@@ -1,22 +1,23 @@
 import java.util.Scanner;
 
-public class SongCatalogApp
+public class SongCatalogueApp
 {
     private Scanner scanner;
 
-    public SongCatalogApp()
+    public SongCatalogueApp()
     {
         this.scanner = new Scanner(System.in);
     }
     public void startProgram()
     {
-        ConsoleUI.printHeader();
-        ConsoleUI.presentMenu();
+        ConsoleUI consoleUI = new ConsoleUI();
+        consoleUI.printHeader();
+        consoleUI.presentMenu(scanner);
     }
 
     public static void main(String[] args)
     {
-        SongCatalogApp myApp = new SongCatalogApp();
+        SongCatalogueApp myApp = new SongCatalogueApp();
         myApp.startProgram();
     }
 }
