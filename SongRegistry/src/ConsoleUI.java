@@ -1,8 +1,8 @@
 public class ConsoleUI
 {
-    private static final String PROGRAMNAME = " -SONG CATALOG APP- ";
-    private static final String PROGRAMAUTHOR = "Stella Preinitz Gärdinge";
-    private static final String AUTHORCOMPANY = "Astral Jellyfish";
+    private static final String PROGRAM_NAME = " -SONG CATALOG APP- ";
+    private static final String PROGRAM_AUTHOR = "Stella Preinitz Gärdinge";
+    private static final String AUTHOR_COMPANY = "Astral Jellyfish";
 
     private static final String RESET = "\u001B[0m";
     private static final String BOLD = "\u001B[1m";
@@ -11,9 +11,9 @@ public class ConsoleUI
     public static void printHeader()
     {
         printDivider();
-        System.out.println(BOLD + BLUE + PROGRAMNAME + RESET);
+        System.out.println(BOLD + BLUE + PROGRAM_NAME + RESET);
         printDivider();
-        System.out.println("Authored by: " + PROGRAMAUTHOR + "\nat " + AUTHORCOMPANY);
+        System.out.println("Authored by: " + PROGRAM_AUTHOR + "\nat " + AUTHOR_COMPANY);
         printDivider();
         System.out.println();
     }
