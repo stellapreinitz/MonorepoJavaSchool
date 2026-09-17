@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class ConsoleUI
 {
+    Scanner scanner = new Scanner(System.in);
+
     private static final String PROGRAM_NAME = " -SONG CATALOG APP- ";
     private static final String PROGRAM_AUTHOR = "Stella Preinitz Gärdinge";
     private static final String AUTHOR_COMPANY = "Astral Jellyfish";
@@ -25,29 +27,36 @@ public class ConsoleUI
     {
         System.out.println("====================");
     }
-    public void presentMenu(Scanner scanner)
+    public int presentMenu()
     {
-        int choice = 0;
-        while (choice != 5)
         {
             System.out.println(BOLD + "========MENU========" + RESET);
             System.out.println("1. Show Catalog");
-            System.out.println("2. Add song to playlist");
-            System.out.println("3. Remove song from playlist");
+            System.out.println("2. Add track to playlist");
+            System.out.println("3. Remove track from playlist");
             System.out.println("4. Show playlist");
             System.out.println("5. Quit");
 
-            choice = scanner.nextInt();
+            int choice = scanner.nextInt();
             scanner.nextLine();
-
-            switch (choice)
+            return choice;
+        }
+    }
+    public void displaySongs(Song[] songs)
+    {
+        for (int index = 0; index < songs.length; index++)
+        {
+            if (songs[index] != null)
             {
-                case 1 -> catalogue.showCatalogue();
-//                case 2 -> addSong();
-//                case 3 -> RemoveSong();
-//                case 4 -> showPlaylist();
-//                case 5 -> System.out.println("Closing application");
-//                default -> System.out.println("Invalid choice");
+                printDivider();
+                System.out.println(BLUE + "Catalogue item " + (index+1) + ":" + RESET);
+                System.out.println("Title: " + songs[index].getTitle());
+                System.out.println("Artist: " + songs[index].getArtist());
+                System.out.println("Duration: " + songs[index].getDurationSeconds() + " seconds");
+                if (songs[index].isLong())
+                {
+                    System.out.println("Long track");
+                }
             }
         }
     }

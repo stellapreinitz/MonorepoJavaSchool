@@ -5,17 +5,10 @@ public class Catalogue
     {
         catalogue = new Song[10];
         catalogue[0] = new Song("Bury It", "Chvrches", 188);
+        catalogue[1] = new Song("Homecoming","Green Day", 558);
     }
-    public void showCatalogue()
+    public Song[] getAllSongs()
     {
-        for (int index = 0; index < catalogue.length; index++)
-        {
-            if (catalogue[index] != null)
-            {
-                System.out.println(catalogue[index].getTitle());
-                System.out.println(catalogue[index].getArtist());
-                System.out.println(catalogue[index].getDurationSeconds());
-            }
-        }
+        return catalogue;
     }
 }
