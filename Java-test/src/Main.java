@@ -1,29 +1,27 @@
-import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Main
 {
     static void main(String[] args)
     {
-        int[] scores = {72, 88, 94, 61, 79};
+        ArrayList<Student> students = new ArrayList<>();
 
-        printNumbers(scores);
-        int sum = calculateSum(scores);
+        students.add(new Student("Ripley", 25));
+        students.add(new Student("Kane", 35));
+        students.add(new Student("Bishop", 58));
+        students.add(new Student("Newt", 7));
 
-        System.out.println("\nSum: " + sum);
-    }
-    public static void printNumbers(int[] values)
-    {
-        System.out.println("---Scores---");
-        for (int index=0; index < values.length; index++)
-            System.out.println(("Score ") + (index+1) + ": " + values[index]);
-    }
-    public static int calculateSum(int[] values)
-    {
-        int sum = 0;
-        for (int index=0; index < values.length; index++)
+        System.out.println("Number of stundets: " + students.size());
+
+        System.out.println("\n===All Students===");
+        for (Student student : students)
         {
-            sum += values[index];
+            printDivider();
+            student.printInfo();
         }
-        return sum;
+    }
+    public static void printDivider()
+    {
+        System.out.println("----------");
     }
 }
