@@ -12,8 +12,6 @@ public class ConsoleUI
     private static final String BOLD = "\u001B[1m";
     private static final String BLUE = "\u001B[34m";
 
-    Catalogue catalogue = new Catalogue();
-
     public void printHeader()
     {
         printDivider();
