@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ConsoleUI
@@ -30,7 +31,7 @@ public class ConsoleUI
         {
             System.out.println(BOLD + "========MENU========" + RESET);
             System.out.println("1. Show Catalog");
-            System.out.println("2. Show Playlist");
+            System.out.println("2. Show long songs");
             System.out.println("3. Add track to Playlist");
             System.out.println("4. Remove track from playlist");
             System.out.println("5. Quit");
@@ -40,26 +41,31 @@ public class ConsoleUI
             return choice;
         }
     }
-    public void displaySongs(Song[] songs)
+    public void displaySongs(ArrayList<Song> songs)
     {
-        for (int index = 0; index < songs.length; index++)
+        printDivider();
+        System.out.println(BLUE + "Number of songs: " + songs.size() + RESET);
+        for (Song song : songs)
         {
-            if (songs[index] != null)
+            System.out.print(song.toString());
+            if (song.isLong())
             {
-                printDivider();
-                System.out.println(BLUE + "Catalogue item " + (index+1) + ":" + RESET);
-                System.out.println("Title: " + songs[index].getTitle());
-                System.out.println("Artist: " + songs[index].getArtist());
-                System.out.println("Duration: " + songs[index].getDurationSeconds() + " seconds");
-                if (songs[index].isLong())
-                {
-                    System.out.println("Long track");
-                }
+                System.out.println(", Long track");
+            }
+            else
+            {
+                System.out.println();
             }
         }
     }
-    public void displayPlaylist()
+    public void displayLongSong(ArrayList<Song> songs)
     {
-
+        for (Song song : songs)
+        {
+            if (song.isLong())
+            {
+                System.out.println(song);
+            }
+        }
     }
 }

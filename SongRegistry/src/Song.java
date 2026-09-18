@@ -10,12 +10,6 @@ public class Song
         this.artist = artist;
         this. durationSeconds = durationSeconds;
     }
-    public void printInfo()
-    {
-        System.out.println("Title: " + title);
-        System.out.println("Artist: " + artist);
-        System.out.println("Duration (seconds): " + durationSeconds);
-    }
     public String getTitle()
     {
         return title;
@@ -43,5 +37,10 @@ public class Song
     public boolean isLong()
     {
         return durationSeconds >= 240;
+    }
+    @Override
+    public String toString()
+    {
+        return title + ", " + artist + ", Length: " + durationSeconds;
     }
 }
