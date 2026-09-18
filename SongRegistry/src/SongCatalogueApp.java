@@ -13,6 +13,7 @@ public class SongCatalogueApp
             switch (choice)
             {
                 case 1 -> consoleUI.displaySongs(catalogue.getAllSongs());
+                case 2 -> consoleUI.displayPlaylist();
             }
         }
     }

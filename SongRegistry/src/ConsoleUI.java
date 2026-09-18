@@ -30,9 +30,9 @@ public class ConsoleUI
         {
             System.out.println(BOLD + "========MENU========" + RESET);
             System.out.println("1. Show Catalog");
-            System.out.println("2. Add track to playlist");
-            System.out.println("3. Remove track from playlist");
-            System.out.println("4. Show playlist");
+            System.out.println("2. Show Playlist");
+            System.out.println("3. Add track to Playlist");
+            System.out.println("4. Remove track from playlist");
             System.out.println("5. Quit");
 
             int choice = scanner.nextInt();
@@ -57,5 +57,9 @@ public class ConsoleUI
                 }
             }
         }
+    }
+    public void displayPlaylist()
+    {
+
     }
 }

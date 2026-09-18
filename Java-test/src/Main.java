@@ -19,6 +19,14 @@ public class Main
             printDivider();
             System.out.println(student.toString());
         }
+        System.out.println("\n===Adult Students===");
+        for (Student student : students)
+        {
+            if (student.isAdult())
+            {
+                System.out.println(student);
+            }
+        }
     }
     public static void printDivider()
     {
