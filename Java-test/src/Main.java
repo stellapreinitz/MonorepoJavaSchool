@@ -11,13 +11,13 @@ public class Main
         students.add(new Student("Bishop", 58));
         students.add(new Student("Newt", 7));
 
-        System.out.println("Number of stundets: " + students.size());
+        System.out.println("Number of students: " + students.size());
 
         System.out.println("\n===All Students===");
         for (Student student : students)
         {
             printDivider();
-            student.printInfo();
+            System.out.println(student.toString());
         }
     }
     public static void printDivider()
