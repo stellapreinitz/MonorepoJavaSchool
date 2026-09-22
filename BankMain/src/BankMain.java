@@ -12,6 +12,5 @@ public class BankMain {
 
         customer2.showAccountDetails();
         customer2.deposit(1000.0);
-        double insättning2 = 1000;
     }
 }
