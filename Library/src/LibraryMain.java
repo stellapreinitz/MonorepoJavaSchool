@@ -3,16 +3,13 @@ public class LibraryMain
     public static void main(String[] args)
     {
         Library library = new Library();
-        for (Book book : library.books)
+        User user = new User("Maria Svensson", "U001");
+        for (Book book : library.getBooks())
         {
-            System.out.println(book.toString());
+            System.out.println(book);
         }
-
-//        // Användare
-//        String användarNamn = "Maria Svensson";
-//        String användarId = "U001";
-//        String[] lånadeBöcker = new String[5]; // Max 5 böcker
-//        int antalLånadeBöcker = 0;
+        System.out.println(user);
+        //user.borrowBook(0);
 //
 //        // Låna bok (bok index 0 - "1984")
 //        int bokIndex = 0;
