@@ -3,12 +3,19 @@ public class Student
     String name;
     String course;
     double[] grades;
+    int age;
+    boolean isAdult = false;
 
-    public Student(String name, String course, double[] grade)
+    public Student(String name, int age, String course, double[] grade)
     {
         this.name = name;
         this.course = course;
         this.grades = grade;
+        this.age = age;
+        if (age >= 18)
+        {
+            isAdult = true;
+        }
     }
     public double calculateAverage()
     {
