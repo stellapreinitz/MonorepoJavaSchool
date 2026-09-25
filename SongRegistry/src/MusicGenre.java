@@ -1,4 +1,20 @@
 public enum MusicGenre
 {
-    SYNTHPOP, PUNKROCK, ELECTROPOP
+    SYNTHPOP("Synthpop"),
+    PUNKROCK("Punkrock"),
+    ELECTROPOP("Electropop"),
+    INDIEROCK("Indierock");
+
+    private final String label;
+
+    MusicGenre (String label)
+    {
+        this.label = label;
+    }
+
+    @Override
+    public String toString()
+    {
+        return this.label;
+    }
 }

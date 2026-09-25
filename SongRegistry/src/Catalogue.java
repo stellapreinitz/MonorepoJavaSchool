@@ -9,6 +9,8 @@ public class Catalogue
         catalogue.add (new Song("Homecoming","Green Day", MusicGenre.PUNKROCK, 558));
         catalogue.add (new Song("Time Machine", "Robyn", MusicGenre.ELECTROPOP, 214));
         catalogue.add (new Song("Primadonna", "MARINA", MusicGenre.ELECTROPOP,218));
+        catalogue.add (new Song("Never Ending Circles", "Chvches", MusicGenre.SYNTHPOP, 186));
+        catalogue.add (new Song("Helgen v.48", "bob hund", MusicGenre.INDIEROCK, 193));
         try
         {
             {
