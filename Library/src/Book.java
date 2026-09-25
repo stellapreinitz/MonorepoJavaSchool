@@ -1,10 +1,10 @@
 public class Book
 {
-    private String title;
-    private String author;
-    private boolean available;
-    private int pages;
-    private int index;
+    private final String title;
+    private final String author;
+    private final boolean available;
+    private final int pages;
+    private final int index;
     Book(String title, String author, int pages, int index)
     {
         this.title = title;

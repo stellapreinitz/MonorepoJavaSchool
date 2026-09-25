@@ -1,7 +1,7 @@
 public class User
 {
-    private String name;
-    private String userID;;
+    private final String name;
+    private final String userID;;
     private String[] borrowedBooks = new String[5];
     private int numberOfBooks;
     public User(String name, String userID)
