@@ -3,12 +3,14 @@ public class Song
     private String title;
     private String artist;
     private int durationSeconds;
+    private MusicGenre genre;
 
-    public Song(String title, String artist, int durationSeconds)
+    public Song(String title, String artist, MusicGenre genre, int durationSeconds)
     {
-        this.title = title;
-        this.artist = artist;
-        this. durationSeconds = durationSeconds;
+        setTitle(title);
+        setArtist(artist);
+        setDurationSeconds(durationSeconds);
+        setGenre(genre);
     }
     public String getTitle()
     {
@@ -18,20 +20,40 @@ public class Song
     {
         return artist;
     }
+    public void setTitle(String title)
+    {
+        if (title == null || title.isBlank())
+        {
+            throw new IllegalArgumentException("Title must be given!");
+        }
+        this.title = title;
+    }
+    public void setArtist(String artist)
+    {
+        if (artist == null || artist.isBlank())
+        {
+            throw new IllegalArgumentException("Artist must be given!");
+        }
+        this.artist = artist;
+    }
+    public void setDurationSeconds(int durationSeconds)
+    {
+        if (durationSeconds <= 0)
+        {
+            throw new IllegalArgumentException("Duration must be larger than 0!");
+        }
+        this.durationSeconds = durationSeconds;
+    }
+    public void setGenre(MusicGenre genre)
+    {
+        if (genre == null)
+        {
+            throw new IllegalArgumentException("Genre must be given!");
+        }
+        this.genre = genre;
+    }
     public int getDurationSeconds()
     {
-        return durationSeconds;
-    }
-    public int setDurationSeconds(int durationSeconds)
-    {
-        if (durationSeconds > 0)
-        {
-            this.durationSeconds = durationSeconds;
-        }
-        else
-        {
-            System.out.println("Duration must be at least 1 second");
-        }
         return durationSeconds;
     }
     public boolean isLong()
@@ -41,6 +63,6 @@ public class Song
     @Override
     public String toString()
     {
-        return title + ", " + artist + ", Length: " + durationSeconds;
+        return title + ", " + artist + " Genre: " + genre + ", Length: " + durationSeconds;
     }
 }
