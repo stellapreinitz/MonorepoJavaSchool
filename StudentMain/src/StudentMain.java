@@ -34,7 +34,7 @@ public class StudentMain
         System.out.println("Adult students: ");
         for (Student student : students)
         {
-            if (student.isAdult)
+            if (student.isAdult())
             {
                 System.out.println(student.getStudentname());
             }

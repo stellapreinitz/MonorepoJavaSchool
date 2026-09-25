@@ -4,7 +4,7 @@ public class Student
     String course;
     double[] grades;
     int age;
-    boolean isAdult = false;
+    int adultAge = 18;
 
     public Student(String name, int age, String course, double[] grade)
     {
@@ -12,10 +12,7 @@ public class Student
         this.course = course;
         this.grades = grade;
         this.age = age;
-        if (age >= 18)
-        {
-            isAdult = true;
-        }
+        if (age >= 18);
     }
     public double calculateAverage()
     {
@@ -38,5 +35,9 @@ public class Student
     public String getCourse()
     {
         return course;
+    }
+    public boolean isAdult()
+    {
+        return age >= adultAge;
     }
 }
