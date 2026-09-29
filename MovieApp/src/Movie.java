@@ -1,4 +1,4 @@
-public class Movie
+public abstract class Movie
 {
     private final String title;
     private final int durationMinutes;
@@ -18,8 +18,13 @@ public class Movie
     {
         return durationMinutes;
     }
-    public String describe()
+    protected  String basicInfo()
     {
         return title + " (" + durationMinutes + " min)";
     }
+    public boolean isLong()
+    {
+        return durationMinutes >= 120;
+    }
+    public abstract String describe();
 }
