@@ -4,24 +4,15 @@ public class MovieApp
 {
     static void main(String[] args)
     {
-        ArrayList<Movie> movies = new ArrayList<>();
-        movies.add(new FeatureFilm("Shrek 2", 93, "animation"));
-        movies.add(new Documentary("Fee Solo", 100, "extreme sport"));
-        movies.add(new FeatureFilm("Shawshank Redemption", 140, "drama"));
-        movies.add(new FeatureFilm("American Grafitti", 110, "drama"));
-        movies.add(new FeatureFilm("Alien", 117, "horror"));
+        MovieRepository movieRepository = new ConsoleMovieRepository(); //Create storage intance
+        MovieService movieService = new MovieService(movieRepository);  //sends instance to service
 
-        System.out.println("Short movies: ");
-        for (Movie movie : movies)
-        {
-            if (!movie.isLong())
-            System.out.println(movie.describe());
-        }
-        System.out.println("Long movies: ");
-        for (Movie movie : movies)
-        {
-            if (movie.isLong())
-            System.out.println(movie.describe());
-        }
+        movieService.addMovie(new FeatureFilm("Shrek 2", 93, "animation"));
+        movieService.addMovie(new Documentary("Fee Solo", 100, "extreme sport"));
+        movieService.addMovie(new FeatureFilm("Shawshank Redemption", 140, "drama"));
+        movieService.addMovie(new FeatureFilm("American Grafitti", 110, "drama"));
+        movieService.addMovie(new FeatureFilm("Alien", 117, "horror"));
+
+        movieService.printAllMovies();
     }
 }
