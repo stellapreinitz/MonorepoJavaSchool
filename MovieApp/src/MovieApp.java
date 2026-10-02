@@ -4,7 +4,7 @@ public class MovieApp
 {
     static void main(String[] args)
     {
-        MovieRepository movieRepository = new ConsoleMovieRepository(); //Create storage intance
+        MovieRepository movieRepository = new ConsoleSortedRepository(); //Create storage instance
         MovieService movieService = new MovieService(movieRepository);  //sends instance to service
 
         movieService.addMovie(new FeatureFilm("Shrek 2", 93, "animation"));
@@ -19,5 +19,7 @@ public class MovieApp
         movieService.printMoviesMatching("ien");
         movieService.printMoviesMatching("SH");
         movieService.printMoviesMatching("ei");
+
+        System.out.println(movieService.countMoviesMatching("a"));
     }
 }
