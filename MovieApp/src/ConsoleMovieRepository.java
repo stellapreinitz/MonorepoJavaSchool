@@ -18,5 +18,4 @@ public class ConsoleMovieRepository implements MovieRepository
     {
         return movies;
     }
-
 }

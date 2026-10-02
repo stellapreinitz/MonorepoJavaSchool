@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class MovieService
 {
@@ -19,5 +20,26 @@ public class MovieService
     public void addMovie(Movie movie)
     {
         movieRepository.add(movie);
+    }
+    public int getMovieCount()
+    {
+        return movieRepository.getAll().size();
+    }
+    public void printMoviesMatching(String searchText)
+    {
+        boolean filmFound = false;
+        ArrayList<Movie> list = movieRepository.getAll();
+        for (Movie movie : list)
+        {
+            if (movie.getTitle().toLowerCase().contains(searchText.toLowerCase()))
+            {
+                System.out.println(movie.getTitle());
+                filmFound = true;
+            }
+        }
+        if (!filmFound)
+        {
+            System.out.println("No films matching search string.");
+        }
     }
 }
