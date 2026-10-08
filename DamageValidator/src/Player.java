@@ -1,6 +1,11 @@
 public class Player
 {
-    private int health = 100;
+    private int health;
+
+    public Player(int health)
+    {
+        this.health = health;
+    }
 
     public void takeDamage(int amount)
     {

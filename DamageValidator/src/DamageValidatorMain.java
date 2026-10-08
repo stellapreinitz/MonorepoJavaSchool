@@ -2,7 +2,7 @@ public class DamageValidatorMain
 {
     static void main(String[] args)
     {
-        Player hero = new Player();
+        Player hero = new Player(100);
         try
         {
             runLevel(hero);
