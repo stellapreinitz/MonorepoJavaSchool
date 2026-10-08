@@ -1,8 +1,15 @@
-static void main()
+public class Main
 {
-    EmailService emailService = new EmailService();
+    static void main(String[] args)
+    {
+        int tal = 10;
+        boolean sant = true;
+        double tal2 = 2.5;
+        long;
+        char;
+        float;
+        byte;
 
-    OrderService orderService = new OrderService(emailService);
-
-    orderService.placeOrder();
+        String namna = "Stella";
+    }
 }

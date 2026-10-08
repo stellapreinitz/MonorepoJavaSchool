@@ -21,7 +21,5 @@ public class MovieApp
         movieService.printMoviesMatching("ei");
 
         System.out.println(movieService.countMoviesMatching("a"));
-
-        movieService.(0);
     }
 }
