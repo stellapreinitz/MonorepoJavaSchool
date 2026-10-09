@@ -2,9 +2,12 @@ public class Main
 {
     static void main(String[] args)
     {
-      char c = 'A';
-      int z = c;
-
-        System.out.println(z);
+       boolean ready = true;
+       int x;
+       if (ready)
+       {
+           x = 1;
+           System.out.println(x);
+       }
     }
 }
