@@ -2,14 +2,9 @@ public class Main
 {
     static void main(String[] args)
     {
-        int tal = 10;
-        boolean sant = true;
-        double tal2 = 2.5;
-        long;
-        char;
-        float;
-        byte;
+      char c = 'A';
+      int z = c;
 
-        String namna = "Stella";
+        System.out.println(z);
     }
 }
