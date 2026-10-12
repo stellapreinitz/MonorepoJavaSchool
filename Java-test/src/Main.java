@@ -2,12 +2,11 @@ public class Main
 {
     static void main(String[] args)
     {
-       boolean ready = true;
-       int x;
-       if (ready)
+       String s = "string";
+       String c = "string";
+       if (s == c)
        {
-           x = 1;
-           System.out.println(x);
+           System.out.println("true");
        }
     }
 }

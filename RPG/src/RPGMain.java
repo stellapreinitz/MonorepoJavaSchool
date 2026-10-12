@@ -8,6 +8,7 @@ public class RPGMain
         classList.add(new Warrior());
         classList.add(new Hunter());
         classList.add(new Necromancer());
+        long number = 100;
 
         Character hero = new Character(classList.get(2));
         Character villain = new Character(classList.get(1));
