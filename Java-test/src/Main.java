@@ -1,31 +1,30 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main
 {
     static void main(String[] args)
     {
-        Pokemon p1 = new Bulbasaur("Buldi", 1);
-        Pokemon p2 = new Pikachu("George", 25);
+        Rectangle r1 = new Rectangle(4.5, 3.0);
+        Triangle t1 = new Triangle(4.5, 3.0);
+        Ellipse e1 = new Ellipse(2.5, 3.5);
 
-        ArrayList<Pokemon> pokedex = new ArrayList<>();
 
-        pokedex.add(p1);
-        pokedex.add(p2);
+        List<Shape> shapes = new ArrayList<>();
 
-        for (Pokemon p : pokedex)
-        {
-            p.attack();
-        }
+        shapes.add(r1);
+        shapes.add(t1);
+        shapes.add(e1);
 
-        for (int index = 0; index < pokedex.size(); index++)
-        {
-            pokedex.get(index).attack();
-        }
+        List<ShapeWithSides> shapeWithSides = new ArrayList<>();
 
-        Pokemon currentPokemon = p2;
+        shapeWithSides.add(r1);
+        shapeWithSides.add(t1);
 
-        System.out.println("Current Pokemon is: " + currentPokemon.toString());
+        for (Shape  s : shapes)
+            System.out.println(s.getArea());
 
-        currentPokemon.attack();
+        for (ShapeWithSides s : shapeWithSides)
+            System.out.println(s.getSidesCount());
     }
 }
